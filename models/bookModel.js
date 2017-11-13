@@ -4,9 +4,8 @@ var mongoose = require('mongoose'),
     var bookModel = new Schema({
         title:{type: String},
         author: {type:String},
-        genere: {type:String},
-        read: {type:Boolean, default:false},
-        price: {type:Number}
+        page: {type:Number, min:1, max:1000},        
+        price: {type:Number, min:0, max:100000}
     });
 
     var Genre = module.exports = mongoose.model('Book', bookModel);
