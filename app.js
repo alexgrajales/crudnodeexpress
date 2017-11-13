@@ -30,3 +30,4 @@ app.listen(port, function () {
     console.log('glup is Running my app on Port:' + port);
 });
 
+module.exports = app;
