@@ -10,8 +10,8 @@ var routes = function (Book) {
     bookRouter.route('/Books')
         .post(function (req, res) {
             var book = new Book(req.body);
-            
-            if(validaciones())
+            console.log(book);
+            if(validaciones(book.price, book.page))
             {
                 console.log('entro 2');
                 book.save();
